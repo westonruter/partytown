@@ -1,1 +1,2 @@
 tests/** linguist-vendored
+lib/** linguist-generated=true
