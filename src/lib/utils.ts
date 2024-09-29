@@ -43,7 +43,10 @@ export const isValidMemberName = (memberName: string) =>
     startsWith(memberName, 'toJSON') ||
     startsWith(memberName, 'constructor') ||
     startsWith(memberName, 'toString') ||
-    startsWith(memberName, '_')
+    (
+      startsWith(memberName, '_') &&
+      !['__', '_n', '_x', '_nx'].includes(memberName) // Workaround for exporting wp.i18n to worker.
+    )
   );
 
 export const getLastMemberName = (applyPath: ApplyPath, i?: number) => {
