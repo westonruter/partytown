@@ -8,7 +8,7 @@
 /docs/site/src/pages/
 node_modules/
 /integration/
-/lib/
+# /lib/
 /react/
 /tests/nextjs/public/
 /tests/benchmarks/screenshots/
